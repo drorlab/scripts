@@ -1,5 +1,5 @@
 #!/bin/bash
-# Works with interact and predict.
+# Creates an sbatch file with specified parameters, running specified command.
 
 display_usage() { 
     printf "Usage: $0 
