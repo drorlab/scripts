@@ -1,6 +1,5 @@
 #!/bin/bash
-# Run an isolated test of the current branch, with a separate codebase and
-# environment.
+# Create a new repo with current branch checked out.
 
 display_usage() {
     echo "Usage: $0 root_code_dir repo_name"
@@ -36,6 +35,3 @@ cd $curr_dir
 git remote add $repo_name $git_dir
 git push $repo_name $commit:refs/head/$repo_name
 git remote remove $repo_name
-
-cd $git_dir/src/learning
-python setup.py build_ext --inplace 2>build.err 1>build.out
